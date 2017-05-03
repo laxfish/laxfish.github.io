@@ -11999,147 +11999,284 @@ var _evancz$elm_graphics$Collage$ngon = F2(
 				f,
 				A2(_elm_lang$core$List$range, 0, n - 1)));
 	});
+var _user$project$Main$asText = function (value) {
+	return _evancz$elm_graphics$Element$show(value);
+};
 var _user$project$Main$view = function (model) {
-	return _evancz$elm_graphics$Element$toHtml(
+	return _elm_lang$core$Native_Utils.eq(model.astronaut.lives, 0) ? _evancz$elm_graphics$Element$toHtml(
 		A3(
 			_evancz$elm_graphics$Collage$collage,
 			1000,
 			500,
 			{
 				ctor: '::',
-				_0: A2(
-					_evancz$elm_graphics$Collage$moveY,
-					model.tank.y - 200,
-					A2(
-						_evancz$elm_graphics$Collage$moveX,
-						model.tank.x - 0,
-						_evancz$elm_graphics$Collage$toForm(
-							A3(_evancz$elm_graphics$Element$image, 100, 100, 'Tank.png')))),
+				_0: _evancz$elm_graphics$Collage$toForm(
+					A3(_evancz$elm_graphics$Element$image, 1000, 500, 'spaceBackground2.jpg')),
 				_1: {
 					ctor: '::',
 					_0: A2(
 						_evancz$elm_graphics$Collage$moveY,
-						-250,
+						0,
 						A2(
-							_evancz$elm_graphics$Collage$filled,
-							_elm_lang$core$Color$black,
-							A2(_evancz$elm_graphics$Collage$rect, 1000, 20))),
+							_evancz$elm_graphics$Collage$moveX,
+							0,
+							_evancz$elm_graphics$Collage$toForm(
+								_evancz$elm_graphics$Element$leftAligned(
+									A2(
+										_evancz$elm_graphics$Text$color,
+										_elm_lang$core$Color$red,
+										_evancz$elm_graphics$Text$fromString('You Died! Mission Failure!')))))),
+					_1: {ctor: '[]'}
+				}
+			})) : (_elm_lang$core$Native_Utils.eq(model.astronaut.missionComplete, true) ? _evancz$elm_graphics$Element$toHtml(
+		A3(
+			_evancz$elm_graphics$Collage$collage,
+			1000,
+			500,
+			{
+				ctor: '::',
+				_0: _evancz$elm_graphics$Collage$toForm(
+					A3(_evancz$elm_graphics$Element$image, 1000, 500, 'spaceBackground2.jpg')),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_evancz$elm_graphics$Collage$moveY,
+						0,
+						A2(
+							_evancz$elm_graphics$Collage$moveX,
+							0,
+							_evancz$elm_graphics$Collage$toForm(
+								_evancz$elm_graphics$Element$leftAligned(
+									A2(
+										_evancz$elm_graphics$Text$color,
+										_elm_lang$core$Color$red,
+										_evancz$elm_graphics$Text$fromString('Mission Successful!  Good hunting!')))))),
 					_1: {
 						ctor: '::',
 						_0: A2(
 							_evancz$elm_graphics$Collage$moveY,
-							model.alien.y,
+							0,
 							A2(
 								_evancz$elm_graphics$Collage$moveX,
-								model.alien.x,
+								-400,
 								_evancz$elm_graphics$Collage$toForm(
-									A3(_evancz$elm_graphics$Element$image, 100, 100, 'Alien.png')))),
+									A3(_evancz$elm_graphics$Element$image, 200, 500, 'rocketLaunch.gif')))),
+						_1: {ctor: '[]'}
+					}
+				}
+			})) : (_elm_lang$core$Native_Utils.eq(model.astronaut.aliensCaptured, 0) ? _evancz$elm_graphics$Element$toHtml(
+		A3(
+			_evancz$elm_graphics$Collage$collage,
+			1000,
+			500,
+			{
+				ctor: '::',
+				_0: _evancz$elm_graphics$Collage$toForm(
+					A3(_evancz$elm_graphics$Element$image, 1000, 500, 'spaceBackground2.jpg')),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_evancz$elm_graphics$Collage$moveY,
+						-150,
+						A2(
+							_evancz$elm_graphics$Collage$moveX,
+							-215,
+							A2(
+								_evancz$elm_graphics$Collage$filled,
+								_elm_lang$core$Color$grey,
+								A2(_evancz$elm_graphics$Collage$rect, 100, 10)))),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_evancz$elm_graphics$Collage$moveY,
+							-150,
+							A2(
+								_evancz$elm_graphics$Collage$moveX,
+								215,
+								A2(
+									_evancz$elm_graphics$Collage$filled,
+									_elm_lang$core$Color$grey,
+									A2(_evancz$elm_graphics$Collage$rect, 100, 10)))),
 						_1: {
 							ctor: '::',
 							_0: A2(
 								_evancz$elm_graphics$Collage$moveY,
-								model.alien.y,
+								-50,
 								A2(
 									_evancz$elm_graphics$Collage$moveX,
-									model.alien.x + 200,
-									_evancz$elm_graphics$Collage$toForm(
-										A3(_evancz$elm_graphics$Element$image, 100, 100, 'Alien.png')))),
+									450,
+									A2(
+										_evancz$elm_graphics$Collage$filled,
+										_elm_lang$core$Color$grey,
+										A2(_evancz$elm_graphics$Collage$rect, 100, 10)))),
 							_1: {
 								ctor: '::',
 								_0: A2(
 									_evancz$elm_graphics$Collage$moveY,
-									model.alien.y,
+									170,
 									A2(
 										_evancz$elm_graphics$Collage$moveX,
-										model.alien.x - 200,
-										_evancz$elm_graphics$Collage$toForm(
-											A3(_evancz$elm_graphics$Element$image, 100, 100, 'Alien.png')))),
+										450,
+										A2(
+											_evancz$elm_graphics$Collage$filled,
+											_elm_lang$core$Color$grey,
+											A2(_evancz$elm_graphics$Collage$rect, 100, 10)))),
 								_1: {
 									ctor: '::',
 									_0: A2(
 										_evancz$elm_graphics$Collage$moveY,
-										model.alien.y,
+										50,
 										A2(
 											_evancz$elm_graphics$Collage$moveX,
-											model.alien.x - 400,
-											_evancz$elm_graphics$Collage$toForm(
-												A3(_evancz$elm_graphics$Element$image, 100, 100, 'Alien.png')))),
+											225,
+											A2(
+												_evancz$elm_graphics$Collage$filled,
+												_elm_lang$core$Color$grey,
+												A2(_evancz$elm_graphics$Collage$rect, 100, 10)))),
 									_1: {
 										ctor: '::',
 										_0: A2(
 											_evancz$elm_graphics$Collage$moveY,
-											model.alien.y,
+											50,
 											A2(
 												_evancz$elm_graphics$Collage$moveX,
-												model.alien.x + 400,
-												_evancz$elm_graphics$Collage$toForm(
-													A3(_evancz$elm_graphics$Element$image, 100, 100, 'Alien.png')))),
+												-165,
+												A2(
+													_evancz$elm_graphics$Collage$filled,
+													_elm_lang$core$Color$grey,
+													A2(_evancz$elm_graphics$Collage$rect, 100, 10)))),
 										_1: {
 											ctor: '::',
 											_0: A2(
 												_evancz$elm_graphics$Collage$moveY,
-												model.alien.y + 400,
+												-210,
 												A2(
 													_evancz$elm_graphics$Collage$moveX,
-													model.alien.x + 100,
+													475,
 													_evancz$elm_graphics$Collage$toForm(
-														A3(_evancz$elm_graphics$Element$image, 100, 100, 'Alien.png')))),
+														A3(_evancz$elm_graphics$Element$image, 75, 75, 'inPortal.png')))),
 											_1: {
 												ctor: '::',
 												_0: A2(
 													_evancz$elm_graphics$Collage$moveY,
-													model.alien.y + 400,
+													210,
 													A2(
 														_evancz$elm_graphics$Collage$moveX,
-														model.alien.x - 100,
+														475,
 														_evancz$elm_graphics$Collage$toForm(
-															A3(_evancz$elm_graphics$Element$image, 100, 100, 'Alien.png')))),
+															A3(_evancz$elm_graphics$Element$image, 75, 75, 'outPortal.png')))),
 												_1: {
 													ctor: '::',
 													_0: A2(
 														_evancz$elm_graphics$Collage$moveY,
-														model.alien.y + 400,
+														model.astronaut.y - 210,
 														A2(
 															_evancz$elm_graphics$Collage$moveX,
-															model.alien.x - 300,
+															model.astronaut.x - 0,
 															_evancz$elm_graphics$Collage$toForm(
-																A3(_evancz$elm_graphics$Element$image, 100, 100, 'Alien.png')))),
+																A3(_evancz$elm_graphics$Element$image, 75, 75, 'astronaut2.png')))),
 													_1: {
 														ctor: '::',
 														_0: A2(
 															_evancz$elm_graphics$Collage$moveY,
-															model.alien.y + 400,
+															0,
 															A2(
 																_evancz$elm_graphics$Collage$moveX,
-																model.alien.x + 300,
+																-400,
 																_evancz$elm_graphics$Collage$toForm(
-																	A3(_evancz$elm_graphics$Element$image, 100, 100, 'Alien.png')))),
+																	A3(_evancz$elm_graphics$Element$image, 200, 500, 'rocketLanding.gif')))),
 														_1: {
 															ctor: '::',
 															_0: A2(
 																_evancz$elm_graphics$Collage$moveY,
-																model.tank.y - 155,
+																50,
 																A2(
 																	_evancz$elm_graphics$Collage$moveX,
-																	model.tank.x,
-																	A2(
-																		_evancz$elm_graphics$Collage$filled,
-																		_elm_lang$core$Color$black,
-																		A2(_evancz$elm_graphics$Collage$rect, 10, 7)))),
+																	15,
+																	_evancz$elm_graphics$Collage$toForm(
+																		A3(_evancz$elm_graphics$Element$image, 100, 100, 'alienRay.png')))),
 															_1: {
 																ctor: '::',
 																_0: A2(
 																	_evancz$elm_graphics$Collage$moveY,
-																	25,
-																	_evancz$elm_graphics$Collage$toForm(
-																		_evancz$elm_graphics$Element$centered(
-																			_evancz$elm_graphics$Text$fromString('Welcome to Elm Invader!')))),
+																	100,
+																	A2(
+																		_evancz$elm_graphics$Collage$moveX,
+																		350,
+																		_evancz$elm_graphics$Collage$toForm(
+																			A3(_evancz$elm_graphics$Element$image, 100, 100, 'alienRay.png')))),
 																_1: {
 																	ctor: '::',
-																	_0: _evancz$elm_graphics$Collage$toForm(
-																		_evancz$elm_graphics$Element$centered(
-																			_evancz$elm_graphics$Text$fromString('Press space to begin and left/right arrows to control tank and the up arrow to shoot'))),
-																	_1: {ctor: '[]'}
+																	_0: A2(
+																		_evancz$elm_graphics$Collage$moveY,
+																		-210,
+																		A2(
+																			_evancz$elm_graphics$Collage$moveX,
+																			215,
+																			_evancz$elm_graphics$Collage$toForm(
+																				A3(_evancz$elm_graphics$Element$image, 100, 100, 'alienCapture.png')))),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(
+																			_evancz$elm_graphics$Collage$moveY,
+																			240,
+																			A2(
+																				_evancz$elm_graphics$Collage$moveX,
+																				-400,
+																				_evancz$elm_graphics$Collage$toForm(
+																					_evancz$elm_graphics$Element$leftAligned(
+																						_evancz$elm_graphics$Text$fromString('Aliens Captured: '))))),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(
+																				_evancz$elm_graphics$Collage$moveY,
+																				240,
+																				A2(
+																					_evancz$elm_graphics$Collage$moveX,
+																					-335,
+																					_evancz$elm_graphics$Collage$toForm(
+																						_user$project$Main$asText(model.astronaut.aliensCaptured)))),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(
+																					_evancz$elm_graphics$Collage$moveY,
+																					215,
+																					A2(
+																						_evancz$elm_graphics$Collage$moveX,
+																						-400,
+																						_evancz$elm_graphics$Collage$toForm(
+																							_evancz$elm_graphics$Element$leftAligned(
+																								_evancz$elm_graphics$Text$fromString('Lives: '))))),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(
+																						_evancz$elm_graphics$Collage$moveY,
+																						215,
+																						A2(
+																							_evancz$elm_graphics$Collage$moveX,
+																							-375,
+																							_evancz$elm_graphics$Collage$toForm(
+																								_user$project$Main$asText(model.astronaut.lives)))),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(
+																							_evancz$elm_graphics$Collage$moveY,
+																							230,
+																							A2(
+																								_evancz$elm_graphics$Collage$moveX,
+																								100,
+																								_evancz$elm_graphics$Collage$toForm(
+																									_evancz$elm_graphics$Element$leftAligned(
+																										A2(
+																											_evancz$elm_graphics$Text$color,
+																											_elm_lang$core$Color$red,
+																											_evancz$elm_graphics$Text$fromString('Welcome to Elm Invader! Use the arrow keys to control the astronaut and catch all the aliens.')))))),
+																						_1: {ctor: '[]'}
+																					}
+																				}
+																			}
+																		}
+																	}
 																}
 															}
 														}
@@ -12153,152 +12290,1048 @@ var _user$project$Main$view = function (model) {
 						}
 					}
 				}
-			}));
+			})) : (_elm_lang$core$Native_Utils.eq(model.astronaut.aliensCaptured, 1) ? _evancz$elm_graphics$Element$toHtml(
+		A3(
+			_evancz$elm_graphics$Collage$collage,
+			1000,
+			500,
+			{
+				ctor: '::',
+				_0: _evancz$elm_graphics$Collage$toForm(
+					A3(_evancz$elm_graphics$Element$image, 1000, 500, 'spaceBackground2.jpg')),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_evancz$elm_graphics$Collage$moveY,
+						-150,
+						A2(
+							_evancz$elm_graphics$Collage$moveX,
+							-215,
+							A2(
+								_evancz$elm_graphics$Collage$filled,
+								_elm_lang$core$Color$grey,
+								A2(_evancz$elm_graphics$Collage$rect, 100, 10)))),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_evancz$elm_graphics$Collage$moveY,
+							-150,
+							A2(
+								_evancz$elm_graphics$Collage$moveX,
+								215,
+								A2(
+									_evancz$elm_graphics$Collage$filled,
+									_elm_lang$core$Color$grey,
+									A2(_evancz$elm_graphics$Collage$rect, 100, 10)))),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_evancz$elm_graphics$Collage$moveY,
+								-50,
+								A2(
+									_evancz$elm_graphics$Collage$moveX,
+									450,
+									A2(
+										_evancz$elm_graphics$Collage$filled,
+										_elm_lang$core$Color$grey,
+										A2(_evancz$elm_graphics$Collage$rect, 100, 10)))),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_evancz$elm_graphics$Collage$moveY,
+									170,
+									A2(
+										_evancz$elm_graphics$Collage$moveX,
+										450,
+										A2(
+											_evancz$elm_graphics$Collage$filled,
+											_elm_lang$core$Color$grey,
+											A2(_evancz$elm_graphics$Collage$rect, 100, 10)))),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_evancz$elm_graphics$Collage$moveY,
+										50,
+										A2(
+											_evancz$elm_graphics$Collage$moveX,
+											225,
+											A2(
+												_evancz$elm_graphics$Collage$filled,
+												_elm_lang$core$Color$grey,
+												A2(_evancz$elm_graphics$Collage$rect, 100, 10)))),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_evancz$elm_graphics$Collage$moveY,
+											50,
+											A2(
+												_evancz$elm_graphics$Collage$moveX,
+												-165,
+												A2(
+													_evancz$elm_graphics$Collage$filled,
+													_elm_lang$core$Color$grey,
+													A2(_evancz$elm_graphics$Collage$rect, 100, 10)))),
+										_1: {
+											ctor: '::',
+											_0: A2(
+												_evancz$elm_graphics$Collage$moveY,
+												-210,
+												A2(
+													_evancz$elm_graphics$Collage$moveX,
+													475,
+													_evancz$elm_graphics$Collage$toForm(
+														A3(_evancz$elm_graphics$Element$image, 75, 75, 'inPortal.png')))),
+											_1: {
+												ctor: '::',
+												_0: A2(
+													_evancz$elm_graphics$Collage$moveY,
+													210,
+													A2(
+														_evancz$elm_graphics$Collage$moveX,
+														475,
+														_evancz$elm_graphics$Collage$toForm(
+															A3(_evancz$elm_graphics$Element$image, 75, 75, 'outPortal.png')))),
+												_1: {
+													ctor: '::',
+													_0: A2(
+														_evancz$elm_graphics$Collage$moveY,
+														model.astronaut.y - 210,
+														A2(
+															_evancz$elm_graphics$Collage$moveX,
+															model.astronaut.x - 0,
+															_evancz$elm_graphics$Collage$toForm(
+																A3(_evancz$elm_graphics$Element$image, 75, 75, 'astronaut2.png')))),
+													_1: {
+														ctor: '::',
+														_0: A2(
+															_evancz$elm_graphics$Collage$moveY,
+															0,
+															A2(
+																_evancz$elm_graphics$Collage$moveX,
+																-400,
+																_evancz$elm_graphics$Collage$toForm(
+																	A3(_evancz$elm_graphics$Element$image, 200, 500, 'rocketLanding.gif')))),
+														_1: {
+															ctor: '::',
+															_0: A2(
+																_evancz$elm_graphics$Collage$moveY,
+																50,
+																A2(
+																	_evancz$elm_graphics$Collage$moveX,
+																	15,
+																	_evancz$elm_graphics$Collage$toForm(
+																		A3(_evancz$elm_graphics$Element$image, 100, 100, 'alienRay.png')))),
+															_1: {
+																ctor: '::',
+																_0: A2(
+																	_evancz$elm_graphics$Collage$moveY,
+																	100,
+																	A2(
+																		_evancz$elm_graphics$Collage$moveX,
+																		350,
+																		_evancz$elm_graphics$Collage$toForm(
+																			A3(_evancz$elm_graphics$Element$image, 100, 100, 'alienRay.png')))),
+																_1: {
+																	ctor: '::',
+																	_0: A2(
+																		_evancz$elm_graphics$Collage$moveY,
+																		-105,
+																		A2(
+																			_evancz$elm_graphics$Collage$moveX,
+																			-215,
+																			_evancz$elm_graphics$Collage$toForm(
+																				A3(_evancz$elm_graphics$Element$image, 100, 100, 'alienCapture.png')))),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(
+																			_evancz$elm_graphics$Collage$moveY,
+																			240,
+																			A2(
+																				_evancz$elm_graphics$Collage$moveX,
+																				-400,
+																				_evancz$elm_graphics$Collage$toForm(
+																					_evancz$elm_graphics$Element$leftAligned(
+																						_evancz$elm_graphics$Text$fromString('Aliens Captured: '))))),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(
+																				_evancz$elm_graphics$Collage$moveY,
+																				240,
+																				A2(
+																					_evancz$elm_graphics$Collage$moveX,
+																					-335,
+																					_evancz$elm_graphics$Collage$toForm(
+																						_user$project$Main$asText(model.astronaut.aliensCaptured)))),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(
+																					_evancz$elm_graphics$Collage$moveY,
+																					215,
+																					A2(
+																						_evancz$elm_graphics$Collage$moveX,
+																						-400,
+																						_evancz$elm_graphics$Collage$toForm(
+																							_evancz$elm_graphics$Element$leftAligned(
+																								_evancz$elm_graphics$Text$fromString('Lives: '))))),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(
+																						_evancz$elm_graphics$Collage$moveY,
+																						215,
+																						A2(
+																							_evancz$elm_graphics$Collage$moveX,
+																							-375,
+																							_evancz$elm_graphics$Collage$toForm(
+																								_user$project$Main$asText(model.astronaut.lives)))),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(
+																							_evancz$elm_graphics$Collage$moveY,
+																							230,
+																							A2(
+																								_evancz$elm_graphics$Collage$moveX,
+																								100,
+																								_evancz$elm_graphics$Collage$toForm(
+																									_evancz$elm_graphics$Element$leftAligned(
+																										A2(
+																											_evancz$elm_graphics$Text$color,
+																											_elm_lang$core$Color$red,
+																											_evancz$elm_graphics$Text$fromString('Welcome to Elm Invader! Use the arrow keys to control the astronaut and catch all the aliens.')))))),
+																						_1: {ctor: '[]'}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			})) : (_elm_lang$core$Native_Utils.eq(model.astronaut.aliensCaptured, 2) ? _evancz$elm_graphics$Element$toHtml(
+		A3(
+			_evancz$elm_graphics$Collage$collage,
+			1000,
+			500,
+			{
+				ctor: '::',
+				_0: _evancz$elm_graphics$Collage$toForm(
+					A3(_evancz$elm_graphics$Element$image, 1000, 500, 'spaceBackground2.jpg')),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_evancz$elm_graphics$Collage$moveY,
+						-150,
+						A2(
+							_evancz$elm_graphics$Collage$moveX,
+							-215,
+							A2(
+								_evancz$elm_graphics$Collage$filled,
+								_elm_lang$core$Color$grey,
+								A2(_evancz$elm_graphics$Collage$rect, 100, 10)))),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_evancz$elm_graphics$Collage$moveY,
+							-150,
+							A2(
+								_evancz$elm_graphics$Collage$moveX,
+								215,
+								A2(
+									_evancz$elm_graphics$Collage$filled,
+									_elm_lang$core$Color$grey,
+									A2(_evancz$elm_graphics$Collage$rect, 100, 10)))),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_evancz$elm_graphics$Collage$moveY,
+								-50,
+								A2(
+									_evancz$elm_graphics$Collage$moveX,
+									450,
+									A2(
+										_evancz$elm_graphics$Collage$filled,
+										_elm_lang$core$Color$grey,
+										A2(_evancz$elm_graphics$Collage$rect, 100, 10)))),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_evancz$elm_graphics$Collage$moveY,
+									170,
+									A2(
+										_evancz$elm_graphics$Collage$moveX,
+										450,
+										A2(
+											_evancz$elm_graphics$Collage$filled,
+											_elm_lang$core$Color$grey,
+											A2(_evancz$elm_graphics$Collage$rect, 100, 10)))),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_evancz$elm_graphics$Collage$moveY,
+										50,
+										A2(
+											_evancz$elm_graphics$Collage$moveX,
+											225,
+											A2(
+												_evancz$elm_graphics$Collage$filled,
+												_elm_lang$core$Color$grey,
+												A2(_evancz$elm_graphics$Collage$rect, 100, 10)))),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_evancz$elm_graphics$Collage$moveY,
+											50,
+											A2(
+												_evancz$elm_graphics$Collage$moveX,
+												-165,
+												A2(
+													_evancz$elm_graphics$Collage$filled,
+													_elm_lang$core$Color$grey,
+													A2(_evancz$elm_graphics$Collage$rect, 100, 10)))),
+										_1: {
+											ctor: '::',
+											_0: A2(
+												_evancz$elm_graphics$Collage$moveY,
+												-210,
+												A2(
+													_evancz$elm_graphics$Collage$moveX,
+													475,
+													_evancz$elm_graphics$Collage$toForm(
+														A3(_evancz$elm_graphics$Element$image, 75, 75, 'inPortal.png')))),
+											_1: {
+												ctor: '::',
+												_0: A2(
+													_evancz$elm_graphics$Collage$moveY,
+													210,
+													A2(
+														_evancz$elm_graphics$Collage$moveX,
+														475,
+														_evancz$elm_graphics$Collage$toForm(
+															A3(_evancz$elm_graphics$Element$image, 75, 75, 'outPortal.png')))),
+												_1: {
+													ctor: '::',
+													_0: A2(
+														_evancz$elm_graphics$Collage$moveY,
+														model.astronaut.y - 210,
+														A2(
+															_evancz$elm_graphics$Collage$moveX,
+															model.astronaut.x - 0,
+															_evancz$elm_graphics$Collage$toForm(
+																A3(_evancz$elm_graphics$Element$image, 75, 75, 'astronaut2.png')))),
+													_1: {
+														ctor: '::',
+														_0: A2(
+															_evancz$elm_graphics$Collage$moveY,
+															0,
+															A2(
+																_evancz$elm_graphics$Collage$moveX,
+																-400,
+																_evancz$elm_graphics$Collage$toForm(
+																	A3(_evancz$elm_graphics$Element$image, 200, 500, 'rocketLanding.gif')))),
+														_1: {
+															ctor: '::',
+															_0: A2(
+																_evancz$elm_graphics$Collage$moveY,
+																50,
+																A2(
+																	_evancz$elm_graphics$Collage$moveX,
+																	15,
+																	_evancz$elm_graphics$Collage$toForm(
+																		A3(_evancz$elm_graphics$Element$image, 100, 100, 'alienRay.png')))),
+															_1: {
+																ctor: '::',
+																_0: A2(
+																	_evancz$elm_graphics$Collage$moveY,
+																	100,
+																	A2(
+																		_evancz$elm_graphics$Collage$moveX,
+																		350,
+																		_evancz$elm_graphics$Collage$toForm(
+																			A3(_evancz$elm_graphics$Element$image, 100, 100, 'alienRay.png')))),
+																_1: {
+																	ctor: '::',
+																	_0: A2(
+																		_evancz$elm_graphics$Collage$moveY,
+																		95,
+																		A2(
+																			_evancz$elm_graphics$Collage$moveX,
+																			-160,
+																			_evancz$elm_graphics$Collage$toForm(
+																				A3(_evancz$elm_graphics$Element$image, 100, 100, 'alienCapture.png')))),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(
+																			_evancz$elm_graphics$Collage$moveY,
+																			240,
+																			A2(
+																				_evancz$elm_graphics$Collage$moveX,
+																				-400,
+																				_evancz$elm_graphics$Collage$toForm(
+																					_evancz$elm_graphics$Element$leftAligned(
+																						_evancz$elm_graphics$Text$fromString('Aliens Captured: '))))),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(
+																				_evancz$elm_graphics$Collage$moveY,
+																				240,
+																				A2(
+																					_evancz$elm_graphics$Collage$moveX,
+																					-335,
+																					_evancz$elm_graphics$Collage$toForm(
+																						_user$project$Main$asText(model.astronaut.aliensCaptured)))),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(
+																					_evancz$elm_graphics$Collage$moveY,
+																					215,
+																					A2(
+																						_evancz$elm_graphics$Collage$moveX,
+																						-400,
+																						_evancz$elm_graphics$Collage$toForm(
+																							_evancz$elm_graphics$Element$leftAligned(
+																								_evancz$elm_graphics$Text$fromString('Lives: '))))),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(
+																						_evancz$elm_graphics$Collage$moveY,
+																						215,
+																						A2(
+																							_evancz$elm_graphics$Collage$moveX,
+																							-375,
+																							_evancz$elm_graphics$Collage$toForm(
+																								_user$project$Main$asText(model.astronaut.lives)))),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(
+																							_evancz$elm_graphics$Collage$moveY,
+																							230,
+																							A2(
+																								_evancz$elm_graphics$Collage$moveX,
+																								100,
+																								_evancz$elm_graphics$Collage$toForm(
+																									_evancz$elm_graphics$Element$leftAligned(
+																										A2(
+																											_evancz$elm_graphics$Text$color,
+																											_elm_lang$core$Color$red,
+																											_evancz$elm_graphics$Text$fromString('Welcome to Elm Invader! Use the arrow keys to control the astronaut and catch all the aliens.')))))),
+																						_1: {ctor: '[]'}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			})) : (_elm_lang$core$Native_Utils.eq(model.astronaut.aliensCaptured, 3) ? _evancz$elm_graphics$Element$toHtml(
+		A3(
+			_evancz$elm_graphics$Collage$collage,
+			1000,
+			500,
+			{
+				ctor: '::',
+				_0: _evancz$elm_graphics$Collage$toForm(
+					A3(_evancz$elm_graphics$Element$image, 1000, 500, 'spaceBackground2.jpg')),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_evancz$elm_graphics$Collage$moveY,
+						-150,
+						A2(
+							_evancz$elm_graphics$Collage$moveX,
+							-215,
+							A2(
+								_evancz$elm_graphics$Collage$filled,
+								_elm_lang$core$Color$grey,
+								A2(_evancz$elm_graphics$Collage$rect, 100, 10)))),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_evancz$elm_graphics$Collage$moveY,
+							-150,
+							A2(
+								_evancz$elm_graphics$Collage$moveX,
+								215,
+								A2(
+									_evancz$elm_graphics$Collage$filled,
+									_elm_lang$core$Color$grey,
+									A2(_evancz$elm_graphics$Collage$rect, 100, 10)))),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_evancz$elm_graphics$Collage$moveY,
+								-50,
+								A2(
+									_evancz$elm_graphics$Collage$moveX,
+									450,
+									A2(
+										_evancz$elm_graphics$Collage$filled,
+										_elm_lang$core$Color$grey,
+										A2(_evancz$elm_graphics$Collage$rect, 100, 10)))),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_evancz$elm_graphics$Collage$moveY,
+									170,
+									A2(
+										_evancz$elm_graphics$Collage$moveX,
+										450,
+										A2(
+											_evancz$elm_graphics$Collage$filled,
+											_elm_lang$core$Color$grey,
+											A2(_evancz$elm_graphics$Collage$rect, 100, 10)))),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_evancz$elm_graphics$Collage$moveY,
+										50,
+										A2(
+											_evancz$elm_graphics$Collage$moveX,
+											225,
+											A2(
+												_evancz$elm_graphics$Collage$filled,
+												_elm_lang$core$Color$grey,
+												A2(_evancz$elm_graphics$Collage$rect, 100, 10)))),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_evancz$elm_graphics$Collage$moveY,
+											50,
+											A2(
+												_evancz$elm_graphics$Collage$moveX,
+												-165,
+												A2(
+													_evancz$elm_graphics$Collage$filled,
+													_elm_lang$core$Color$grey,
+													A2(_evancz$elm_graphics$Collage$rect, 100, 10)))),
+										_1: {
+											ctor: '::',
+											_0: A2(
+												_evancz$elm_graphics$Collage$moveY,
+												-210,
+												A2(
+													_evancz$elm_graphics$Collage$moveX,
+													475,
+													_evancz$elm_graphics$Collage$toForm(
+														A3(_evancz$elm_graphics$Element$image, 75, 75, 'inPortal.png')))),
+											_1: {
+												ctor: '::',
+												_0: A2(
+													_evancz$elm_graphics$Collage$moveY,
+													210,
+													A2(
+														_evancz$elm_graphics$Collage$moveX,
+														475,
+														_evancz$elm_graphics$Collage$toForm(
+															A3(_evancz$elm_graphics$Element$image, 75, 75, 'outPortal.png')))),
+												_1: {
+													ctor: '::',
+													_0: A2(
+														_evancz$elm_graphics$Collage$moveY,
+														model.astronaut.y - 210,
+														A2(
+															_evancz$elm_graphics$Collage$moveX,
+															model.astronaut.x - 0,
+															_evancz$elm_graphics$Collage$toForm(
+																A3(_evancz$elm_graphics$Element$image, 75, 75, 'astronaut2.png')))),
+													_1: {
+														ctor: '::',
+														_0: A2(
+															_evancz$elm_graphics$Collage$moveY,
+															0,
+															A2(
+																_evancz$elm_graphics$Collage$moveX,
+																-400,
+																_evancz$elm_graphics$Collage$toForm(
+																	A3(_evancz$elm_graphics$Element$image, 200, 500, 'rocketLanding.gif')))),
+														_1: {
+															ctor: '::',
+															_0: A2(
+																_evancz$elm_graphics$Collage$moveY,
+																50,
+																A2(
+																	_evancz$elm_graphics$Collage$moveX,
+																	15,
+																	_evancz$elm_graphics$Collage$toForm(
+																		A3(_evancz$elm_graphics$Element$image, 100, 100, 'alienRay.png')))),
+															_1: {
+																ctor: '::',
+																_0: A2(
+																	_evancz$elm_graphics$Collage$moveY,
+																	100,
+																	A2(
+																		_evancz$elm_graphics$Collage$moveX,
+																		350,
+																		_evancz$elm_graphics$Collage$toForm(
+																			A3(_evancz$elm_graphics$Element$image, 100, 100, 'alienRay.png')))),
+																_1: {
+																	ctor: '::',
+																	_0: A2(
+																		_evancz$elm_graphics$Collage$moveY,
+																		240,
+																		A2(
+																			_evancz$elm_graphics$Collage$moveX,
+																			-400,
+																			_evancz$elm_graphics$Collage$toForm(
+																				_evancz$elm_graphics$Element$leftAligned(
+																					_evancz$elm_graphics$Text$fromString('Aliens Captured: '))))),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(
+																			_evancz$elm_graphics$Collage$moveY,
+																			240,
+																			A2(
+																				_evancz$elm_graphics$Collage$moveX,
+																				-335,
+																				_evancz$elm_graphics$Collage$toForm(
+																					_user$project$Main$asText(model.astronaut.aliensCaptured)))),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(
+																				_evancz$elm_graphics$Collage$moveY,
+																				215,
+																				A2(
+																					_evancz$elm_graphics$Collage$moveX,
+																					-400,
+																					_evancz$elm_graphics$Collage$toForm(
+																						_evancz$elm_graphics$Element$leftAligned(
+																							_evancz$elm_graphics$Text$fromString('Lives: '))))),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(
+																					_evancz$elm_graphics$Collage$moveY,
+																					215,
+																					A2(
+																						_evancz$elm_graphics$Collage$moveX,
+																						-375,
+																						_evancz$elm_graphics$Collage$toForm(
+																							_user$project$Main$asText(model.astronaut.lives)))),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(
+																						_evancz$elm_graphics$Collage$moveY,
+																						190,
+																						A2(
+																							_evancz$elm_graphics$Collage$moveX,
+																							-375,
+																							_evancz$elm_graphics$Collage$toForm(
+																								_evancz$elm_graphics$Element$leftAligned(
+																									A2(
+																										_evancz$elm_graphics$Text$color,
+																										_elm_lang$core$Color$red,
+																										_evancz$elm_graphics$Text$fromString('Aliens Captured! Get to the ship!')))))),
+																					_1: {ctor: '[]'}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			})) : _evancz$elm_graphics$Element$toHtml(
+		A3(
+			_evancz$elm_graphics$Collage$collage,
+			1000,
+			500,
+			{
+				ctor: '::',
+				_0: _evancz$elm_graphics$Collage$toForm(
+					A3(_evancz$elm_graphics$Element$image, 1000, 500, 'spaceBackground2.jpg')),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_evancz$elm_graphics$Collage$moveY,
+						0,
+						A2(
+							_evancz$elm_graphics$Collage$moveX,
+							0,
+							_evancz$elm_graphics$Collage$toForm(
+								_evancz$elm_graphics$Element$leftAligned(
+									A2(
+										_evancz$elm_graphics$Text$color,
+										_elm_lang$core$Color$red,
+										_evancz$elm_graphics$Text$fromString('Mission Failure!')))))),
+					_1: {ctor: '[]'}
+				}
+			})))))));
 };
-var _user$project$Main$floor = function (model) {
-	if (_elm_lang$core$Native_Utils.cmp(model.tank.y, 0) < 0) {
-		var tank1 = model.tank;
+var _user$project$Main$missionSuccessful = function (model) {
+	if ((_elm_lang$core$Native_Utils.cmp(model.astronaut.x, -300) < 0) && _elm_lang$core$Native_Utils.eq(model.astronaut.aliensCaptured, 3)) {
+		var astro = model.astronaut;
 		return _elm_lang$core$Native_Utils.update(
 			model,
 			{
-				tank: _elm_lang$core$Native_Utils.update(
-					tank1,
+				astronaut: _elm_lang$core$Native_Utils.update(
+					astro,
+					{missionComplete: true})
+			});
+	} else {
+		return model;
+	}
+};
+var _user$project$Main$captureAlien2 = function (model) {
+	if ((_elm_lang$core$Native_Utils.cmp(model.astronaut.y, 90) > 0) && ((_elm_lang$core$Native_Utils.cmp(model.astronaut.y, 100) < 0) && ((_elm_lang$core$Native_Utils.cmp(model.astronaut.x, -212) < 0) && ((_elm_lang$core$Native_Utils.cmp(model.astronaut.x, -215) > 0) && _elm_lang$core$Native_Utils.eq(model.astronaut.aliensCaptured, 1))))) {
+		var astro = model.astronaut;
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				astronaut: _elm_lang$core$Native_Utils.update(
+					astro,
+					{aliensCaptured: model.astronaut.aliensCaptured + 1})
+			});
+	} else {
+		return model;
+	}
+};
+var _user$project$Main$captureAlien3 = function (model) {
+	if ((_elm_lang$core$Native_Utils.cmp(model.astronaut.y, 290) > 0) && ((_elm_lang$core$Native_Utils.cmp(model.astronaut.y, 300) < 0) && ((_elm_lang$core$Native_Utils.cmp(model.astronaut.x, -157) < 0) && ((_elm_lang$core$Native_Utils.cmp(model.astronaut.x, -162) > 0) && _elm_lang$core$Native_Utils.eq(model.astronaut.aliensCaptured, 2))))) {
+		var astro = model.astronaut;
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				astronaut: _elm_lang$core$Native_Utils.update(
+					astro,
+					{aliensCaptured: model.astronaut.aliensCaptured + 1})
+			});
+	} else {
+		return model;
+	}
+};
+var _user$project$Main$captureAlien1 = function (model) {
+	if (_elm_lang$core$Native_Utils.eq(model.astronaut.y, 0) && ((_elm_lang$core$Native_Utils.cmp(model.astronaut.x, 203) < 0) && ((_elm_lang$core$Native_Utils.cmp(model.astronaut.x, 200) > 0) && _elm_lang$core$Native_Utils.eq(model.astronaut.aliensCaptured, 0)))) {
+		var astro = model.astronaut;
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				astronaut: _elm_lang$core$Native_Utils.update(
+					astro,
+					{aliensCaptured: model.astronaut.aliensCaptured + 1})
+			});
+	} else {
+		return model;
+	}
+};
+var _user$project$Main$alienShip2 = function (model) {
+	if ((_elm_lang$core$Native_Utils.cmp(model.astronaut.y, 250) > 0) && ((_elm_lang$core$Native_Utils.cmp(model.astronaut.y, 350) < 0) && ((_elm_lang$core$Native_Utils.cmp(model.astronaut.x, 600) < 0) && (_elm_lang$core$Native_Utils.cmp(model.astronaut.x, 400) > 0)))) {
+		var astro = model.astronaut;
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				astronaut: _elm_lang$core$Native_Utils.update(
+					astro,
+					{x: 0, y: 0, lives: model.astronaut.lives - 1})
+			});
+	} else {
+		return model;
+	}
+};
+var _user$project$Main$alienShip1 = function (model) {
+	if ((_elm_lang$core$Native_Utils.cmp(model.astronaut.y, 175) > 0) && ((_elm_lang$core$Native_Utils.cmp(model.astronaut.y, 300) < 0) && ((_elm_lang$core$Native_Utils.cmp(model.astronaut.x, 10) < 0) && (_elm_lang$core$Native_Utils.cmp(model.astronaut.x, -100) > 0)))) {
+		var astro = model.astronaut;
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				astronaut: _elm_lang$core$Native_Utils.update(
+					astro,
+					{x: 0, y: 0, lives: model.astronaut.lives - 1})
+			});
+	} else {
+		return model;
+	}
+};
+var _user$project$Main$platform6 = function (model) {
+	if ((_elm_lang$core$Native_Utils.cmp(model.astronaut.y, 290) > 0) && ((_elm_lang$core$Native_Utils.cmp(model.astronaut.y, 300) < 0) && ((_elm_lang$core$Native_Utils.cmp(model.astronaut.x, -100) < 0) && (_elm_lang$core$Native_Utils.cmp(model.astronaut.x, -260) > 0)))) {
+		var astro = model.astronaut;
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				astronaut: _elm_lang$core$Native_Utils.update(
+					astro,
+					{x: model.astronaut.x, y: model.astronaut.y, vx: model.astronaut.groundAcceleration, vy: 0})
+			});
+	} else {
+		return model;
+	}
+};
+var _user$project$Main$platform5 = function (model) {
+	if ((_elm_lang$core$Native_Utils.cmp(model.astronaut.y, 290) > 0) && ((_elm_lang$core$Native_Utils.cmp(model.astronaut.y, 300) < 0) && ((_elm_lang$core$Native_Utils.cmp(model.astronaut.x, 240) < 0) && (_elm_lang$core$Native_Utils.cmp(model.astronaut.x, 190) > 0)))) {
+		var astro = model.astronaut;
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				astronaut: _elm_lang$core$Native_Utils.update(
+					astro,
+					{x: model.astronaut.x, y: model.astronaut.y, vx: model.astronaut.groundAcceleration, vy: 0})
+			});
+	} else {
+		return model;
+	}
+};
+var _user$project$Main$platform4 = function (model) {
+	if ((_elm_lang$core$Native_Utils.cmp(model.astronaut.y, 405) > 0) && ((_elm_lang$core$Native_Utils.cmp(model.astronaut.y, 415) < 0) && ((_elm_lang$core$Native_Utils.cmp(model.astronaut.x, 500) < 0) && (_elm_lang$core$Native_Utils.cmp(model.astronaut.x, 400) > 0)))) {
+		var astro = model.astronaut;
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				astronaut: _elm_lang$core$Native_Utils.update(
+					astro,
+					{x: model.astronaut.x, y: model.astronaut.y, vx: model.astronaut.groundAcceleration, vy: 0})
+			});
+	} else {
+		return model;
+	}
+};
+var _user$project$Main$platform3 = function (model) {
+	if ((_elm_lang$core$Native_Utils.cmp(model.astronaut.y, 190) > 0) && ((_elm_lang$core$Native_Utils.cmp(model.astronaut.y, 200) < 0) && ((_elm_lang$core$Native_Utils.cmp(model.astronaut.x, 500) < 0) && (_elm_lang$core$Native_Utils.cmp(model.astronaut.x, 400) > 0)))) {
+		var astro = model.astronaut;
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				astronaut: _elm_lang$core$Native_Utils.update(
+					astro,
+					{x: model.astronaut.x, y: model.astronaut.y, vx: model.astronaut.groundAcceleration, vy: 0})
+			});
+	} else {
+		return model;
+	}
+};
+var _user$project$Main$platform2 = function (model) {
+	if ((_elm_lang$core$Native_Utils.cmp(model.astronaut.y, 90) > 0) && ((_elm_lang$core$Native_Utils.cmp(model.astronaut.y, 100) < 0) && ((_elm_lang$core$Native_Utils.cmp(model.astronaut.x, 260) < 0) && (_elm_lang$core$Native_Utils.cmp(model.astronaut.x, 160) > 0)))) {
+		var astro = model.astronaut;
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				astronaut: _elm_lang$core$Native_Utils.update(
+					astro,
+					{x: model.astronaut.x, y: model.astronaut.y, vx: model.astronaut.groundAcceleration, vy: 0})
+			});
+	} else {
+		return model;
+	}
+};
+var _user$project$Main$platform1 = function (model) {
+	if ((_elm_lang$core$Native_Utils.cmp(model.astronaut.y, 90) > 0) && ((_elm_lang$core$Native_Utils.cmp(model.astronaut.y, 100) < 0) && ((_elm_lang$core$Native_Utils.cmp(model.astronaut.x, -170) < 0) && (_elm_lang$core$Native_Utils.cmp(model.astronaut.x, -270) > 0)))) {
+		var astro = model.astronaut;
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				astronaut: _elm_lang$core$Native_Utils.update(
+					astro,
+					{x: model.astronaut.x, y: model.astronaut.y, vx: model.astronaut.groundAcceleration, vy: 0})
+			});
+	} else {
+		return model;
+	}
+};
+var _user$project$Main$portalIn = function (model) {
+	if (_elm_lang$core$Native_Utils.eq(model.astronaut.y, 0) && (_elm_lang$core$Native_Utils.cmp(model.astronaut.x, 475) > 0)) {
+		var astro = model.astronaut;
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				astronaut: _elm_lang$core$Native_Utils.update(
+					astro,
+					{x: 450, y: 425, vx: 0, vy: 0})
+			});
+	} else {
+		return model;
+	}
+};
+var _user$project$Main$rightSide = function (model) {
+	if (_elm_lang$core$Native_Utils.cmp(model.astronaut.x, 500) > 0) {
+		var astro = model.astronaut;
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				astronaut: _elm_lang$core$Native_Utils.update(
+					astro,
+					{x: 500, vx: 0})
+			});
+	} else {
+		return model;
+	}
+};
+var _user$project$Main$leftSide = function (model) {
+	if (_elm_lang$core$Native_Utils.cmp(model.astronaut.x, -500) < 0) {
+		var astro = model.astronaut;
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				astronaut: _elm_lang$core$Native_Utils.update(
+					astro,
+					{x: -500, vx: 0})
+			});
+	} else {
+		return model;
+	}
+};
+var _user$project$Main$floor = function (model) {
+	if (_elm_lang$core$Native_Utils.cmp(model.astronaut.y, 0) < 0) {
+		var astro = model.astronaut;
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				astronaut: _elm_lang$core$Native_Utils.update(
+					astro,
 					{y: 0, vy: 0})
 			});
 	} else {
 		return model;
 	}
 };
-var _user$project$Main$acceleration = function (model) {
-	var tank1 = model.tank;
+var _user$project$Main$groundAcceleration = 0;
+var _user$project$Main$gravityAcceleration = -2.8e-2;
+var _user$project$Main$jumpVelocity = 2.5;
+var _user$project$Main$horizontalVelocity = 2;
+var _user$project$Main$initialRocket = {x: 0, y: -300, vx: 0, vy: 0, groundAcceleration: 0.0, aliensCaptured: 0};
+var _user$project$Main$initialAlien = {y: 0, x: 0, alive: true};
+var _user$project$Main$gravity = function (model) {
+	var astro = model.astronaut;
 	return _elm_lang$core$Native_Utils.update(
 		model,
 		{
-			tank: _elm_lang$core$Native_Utils.update(
-				tank1,
-				{vx: model.tank.groundAcceleration})
+			astronaut: _elm_lang$core$Native_Utils.update(
+				astro,
+				{vy: model.astronaut.vy + _user$project$Main$gravityAcceleration})
 		});
 };
-var _user$project$Main$motion = function (model) {
-	var tank1 = model.tank;
-	return _elm_lang$core$Native_Utils.update(
-		model,
-		{
-			tank: _elm_lang$core$Native_Utils.update(
-				tank1,
-				{x: model.tank.x + model.tank.vx, y: model.tank.y + model.tank.vy})
-		});
-};
-var _user$project$Main$stop = F2(
-	function (velocity, model) {
-		var tank1 = model.tank;
+var _user$project$Main$traction = function (model) {
+	if (_elm_lang$core$Native_Utils.eq(model.astronaut.y, 0)) {
+		var astro = model.astronaut;
 		return _elm_lang$core$Native_Utils.update(
 			model,
 			{
-				tank: _elm_lang$core$Native_Utils.update(
-					tank1,
+				astronaut: _elm_lang$core$Native_Utils.update(
+					astro,
+					{vx: model.astronaut.groundAcceleration})
+			});
+	} else {
+		return model;
+	}
+};
+var _user$project$Main$stop = F2(
+	function (compare, model) {
+		var astro = model.astronaut;
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				astronaut: _elm_lang$core$Native_Utils.update(
+					astro,
 					{groundAcceleration: 0})
 			});
 	});
-var _user$project$Main$accelerateTo = F2(
+var _user$project$Main$astronautAcceleration = F2(
 	function (velocity, model) {
-		var tank1 = model.tank;
+		var astro = model.astronaut;
 		return _elm_lang$core$Native_Utils.update(
 			model,
 			{
-				tank: _elm_lang$core$Native_Utils.update(
-					tank1,
+				astronaut: _elm_lang$core$Native_Utils.update(
+					astro,
 					{groundAcceleration: velocity})
 			});
 	});
-var _user$project$Main$bulletVelocity = F2(
-	function (shotVelocity, model) {
-		var bullet = model.bullet;
-		return _elm_lang$core$Native_Utils.update(
-			model,
-			{
-				bullet: _elm_lang$core$Native_Utils.update(
-					bullet,
-					{vy: model.bullet.vy + shotVelocity})
-			});
-	});
-var _user$project$Main$bulletMovement = function (model) {
-	var bullet = model.bullet;
+var _user$project$Main$motion = function (model) {
+	var astro = model.astronaut;
 	return _elm_lang$core$Native_Utils.update(
 		model,
 		{
-			bullet: _elm_lang$core$Native_Utils.update(
-				bullet,
-				{
-					y: model.bullet.y(model.bullet.vy)
-				})
-		});
-};
-var _user$project$Main$alienMovement = function (model) {
-	var alien1 = model.alien;
-	return _elm_lang$core$Native_Utils.update(
-		model,
-		{
-			alien: _elm_lang$core$Native_Utils.update(
-				alien1,
-				{y: model.alien.y - model.alien.vy})
-		});
-};
-var _user$project$Main$tankMovement = function (model) {
-	var tank1 = model.tank;
-	return _elm_lang$core$Native_Utils.update(
-		model,
-		{
-			tank: _elm_lang$core$Native_Utils.update(
-				tank1,
-				{x: model.tank.x + model.tank.vx, y: model.tank.y + model.tank.vy})
-		});
-};
-var _user$project$Main$initialTank = {x: 0, y: -200, vx: 0, vy: 0, groundAcceleration: 0.0, health: 10};
-var _user$project$Main$groundAcceleration = 1.0e-2;
-var _user$project$Main$gravityAcceleration = -1.0e-2;
-var _user$project$Main$initialAlien = {y: 200, x: 0, vy: _user$project$Main$gravityAcceleration, alive: true, hitGround: false};
-var _user$project$Main$gravity = function (model) {
-	var alien = model.alien;
-	return _elm_lang$core$Native_Utils.update(
-		model,
-		{
-			alien: _elm_lang$core$Native_Utils.update(
-				alien,
-				{vy: model.alien.vy - _user$project$Main$gravityAcceleration})
+			astronaut: _elm_lang$core$Native_Utils.update(
+				astro,
+				{x: model.astronaut.x + model.astronaut.vx, y: model.astronaut.y + model.astronaut.vy})
 		});
 };
 var _user$project$Main$tick = function (model) {
-	return _user$project$Main$floor(
-		_user$project$Main$motion(
-			_user$project$Main$gravity(
-				_user$project$Main$alienMovement(
-					_user$project$Main$acceleration(model)))));
+	return _user$project$Main$missionSuccessful(
+		_user$project$Main$captureAlien3(
+			_user$project$Main$captureAlien2(
+				_user$project$Main$captureAlien1(
+					_user$project$Main$alienShip2(
+						_user$project$Main$alienShip1(
+							_user$project$Main$portalIn(
+								_user$project$Main$platform6(
+									_user$project$Main$platform5(
+										_user$project$Main$platform4(
+											_user$project$Main$platform3(
+												_user$project$Main$platform2(
+													_user$project$Main$platform1(
+														_user$project$Main$rightSide(
+															_user$project$Main$leftSide(
+																_user$project$Main$floor(
+																	_user$project$Main$motion(
+																		_user$project$Main$gravity(
+																			_user$project$Main$traction(model)))))))))))))))))));
 };
-var _user$project$Main$shotVelocity = 10;
-var _user$project$Main$initialBullet = F2(
-	function (tank, model) {
-		return {x: model.tank.x, y: model.tank.y, vx: 0, vy: _user$project$Main$shotVelocity, hit: false};
-	});
-var _user$project$Main$spawnBullet = F2(
-	function (bulletList, model) {
-		return {x: 0, y: 0, vx: 0, vy: _user$project$Main$shotVelocity, hit: false};
-	});
-var _user$project$Main$horizontalVelocity = 10;
+var _user$project$Main$astronautJump = function (model) {
+	if (_elm_lang$core$Native_Utils.eq(model.astronaut.vy, 0)) {
+		var astro = model.astronaut;
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				astronaut: _elm_lang$core$Native_Utils.update(
+					astro,
+					{vy: _user$project$Main$jumpVelocity})
+			});
+	} else {
+		if (_elm_lang$core$Native_Utils.eq(model.vy, _user$project$Main$jumpVelocity)) {
+			var astro = model.astronaut;
+			return _elm_lang$core$Native_Utils.update(
+				model,
+				{
+					astronaut: _elm_lang$core$Native_Utils.update(
+						astro,
+						{y: model.astronaut.y + model.astronaut.vy})
+				});
+		} else {
+			return model;
+		}
+	}
+};
 var _user$project$Main$key = F2(
 	function (msg, model) {
 		return function () {
 			var _p0 = msg;
-			_v0_4:
+			_v0_5:
 			do {
 				if (_p0.ctor === 'KeyPress') {
 					switch (_p0._0) {
+						case 38:
+							return _user$project$Main$astronautJump;
 						case 37:
-							return _user$project$Main$accelerateTo(0 - _user$project$Main$horizontalVelocity);
+							return _user$project$Main$astronautAcceleration(0 - _user$project$Main$horizontalVelocity);
 						case 39:
-							return _user$project$Main$accelerateTo(_user$project$Main$horizontalVelocity);
+							return _user$project$Main$astronautAcceleration(_user$project$Main$horizontalVelocity);
 						default:
-							break _v0_4;
+							break _v0_5;
 					}
 				} else {
 					switch (_p0._0) {
@@ -12306,22 +13339,23 @@ var _user$project$Main$key = F2(
 							return _user$project$Main$stop(
 								F2(
 									function (x, y) {
-										return _elm_lang$core$Native_Utils.cmp(x, y) < 0;
+										return _elm_lang$core$Native_Utils.cmp(x, y) > 0;
 									}));
 						case 39:
 							return _user$project$Main$stop(
 								F2(
 									function (x, y) {
-										return _elm_lang$core$Native_Utils.cmp(x, y) > 0;
+										return _elm_lang$core$Native_Utils.cmp(x, y) < 0;
 									}));
 						default:
-							break _v0_4;
+							break _v0_5;
 					}
 				}
 			} while(false);
 			return _elm_lang$core$Basics$identity;
 		}()(model);
 	});
+var _user$project$Main$initialAstronaut = {x: 0, y: 0, vx: 0, vy: 0, groundAcceleration: 0.0, aliensCaptured: 0, lives: 2, missionComplete: false};
 var _user$project$Main$update = F2(
 	function (msg, model) {
 		var _p1 = msg;
@@ -12339,19 +13373,25 @@ var _user$project$Main$updateWithCommand = F2(
 			_1: _elm_lang$core$Platform_Cmd$none
 		};
 	});
-var _user$project$Main$initialModel = {x: 0, y: 0, tank: _user$project$Main$initialTank, alien: _user$project$Main$initialAlien};
-var _user$project$Main$Tank = F6(
+var _user$project$Main$initialModel = {x: 0, y: 0, vx: 0, vy: 0, astronaut: _user$project$Main$initialAstronaut, alien: _user$project$Main$initialAlien, rocket: _user$project$Main$initialRocket, groundAcceleration: 0};
+var _user$project$Main$Astronaut = F8(
+	function (a, b, c, d, e, f, g, h) {
+		return {x: a, y: b, vx: c, vy: d, groundAcceleration: e, aliensCaptured: f, lives: g, missionComplete: h};
+	});
+var _user$project$Main$Alien = F3(
+	function (a, b, c) {
+		return {y: a, x: b, alive: c};
+	});
+var _user$project$Main$Rocket = F6(
 	function (a, b, c, d, e, f) {
-		return {x: a, y: b, vx: c, vy: d, groundAcceleration: e, health: f};
+		return {x: a, y: b, vx: c, vy: d, groundAcceleration: e, aliensCaptured: f};
 	});
-var _user$project$Main$Alien = F5(
-	function (a, b, c, d, e) {
-		return {y: a, x: b, vy: c, alive: d, hitGround: e};
-	});
-var _user$project$Main$Bullet = F5(
-	function (a, b, c, d, e) {
-		return {x: a, y: b, vx: c, vy: d, hit: e};
-	});
+var _user$project$Main$Win = {ctor: 'Win'};
+var _user$project$Main$NoMoreLives = {ctor: 'NoMoreLives'};
+var _user$project$Main$ThreeAlienCaptured = {ctor: 'ThreeAlienCaptured'};
+var _user$project$Main$TwoAlienCaptured = {ctor: 'TwoAlienCaptured'};
+var _user$project$Main$OneAlienCaptured = {ctor: 'OneAlienCaptured'};
+var _user$project$Main$NoAliensCaptured = {ctor: 'NoAliensCaptured'};
 var _user$project$Main$Tick = function (a) {
 	return {ctor: 'Tick', _0: a};
 };
